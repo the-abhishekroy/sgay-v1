@@ -1,11 +1,13 @@
 "use client";
 
-import type React from "react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
+import React from "react";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { toast } from "sonner";
 import {
   Card,
   CardContent,
@@ -34,7 +36,18 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowLeft, Check, Loader2, MapPin, Upload, X } from "lucide-react";
+import { 
+  ArrowLeft, 
+  Check, 
+  Loader2, 
+  MapPin, 
+  Upload, 
+  X,
+  Calendar,
+  Printer,
+  Download,
+  FileText 
+} from "lucide-react";
 import { fetchHouseById, updateHouse, fetchOfficers } from "@/lib/api";
 import type { House, Officer } from "@/lib/types";
 import { useSidebar } from "@/components/sidebar-provider";
@@ -79,17 +92,15 @@ const formSchema = z.object({
   finishingDate: z.string().optional(),
 });
 
-export default function EditBeneficiaryPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function EditBeneficiaryPage() {
+  const router = useRouter();
+  const params = useParams();
+  const id = params.id as string;
   const [house, setHouse] = useState<House | null>(null);
   const [officers, setOfficers] = useState<Officer[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [images, setImages] = useState<string[]>([]);
-  const router = useRouter();
   const { user } = useSidebar();
   const { toast } = useToast();
 
@@ -133,7 +144,7 @@ export default function EditBeneficiaryPage({
       try {
         setIsLoading(true);
         const [houseData, officersData] = await Promise.all([
-          fetchHouseById(Number.parseInt(params.id)),
+          fetchHouseById(Number.parseInt(id)),
           fetchOfficers(),
         ]);
 
@@ -187,7 +198,7 @@ export default function EditBeneficiaryPage({
     };
 
     loadData();
-  }, [user, router, params.id, form, toast]);
+  }, [user, router, id, form, toast]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;

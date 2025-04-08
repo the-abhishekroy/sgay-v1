@@ -29,7 +29,7 @@ export default function MapPage() {
   const [filteredHouses, setFilteredHouses] = useState<House[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [filters, setFilters] = useState({
-    district: "",
+    constituency: "",
     stage: "",
     search: "",
     progressRange: [0, 100],
@@ -59,8 +59,8 @@ export default function MapPage() {
     // Apply filters
     let result = houses
 
-    if (filters.district) {
-      result = result.filter((house) => house.district === filters.district)
+    if (filters.constituency) {
+      result = result.filter((house) => house.constituency === filters.constituency)
     }
 
     if (filters.stage) {
@@ -93,8 +93,8 @@ export default function MapPage() {
     setFilteredHouses(result)
   }, [filters, houses])
 
-  // Get unique districts and stages for filters
-  const districts = [...new Set(houses.map((house) => house.district))].sort()
+  // Get unique constituencies and stages for filters
+  const constituencies = [...new Set(houses.map((house) => house.constituency))].sort()
   const stages = [...new Set(houses.map((house) => house.stage))].sort()
 
   const handleFilterChange = (key: string, value: any) => {
@@ -103,7 +103,7 @@ export default function MapPage() {
 
   const resetFilters = () => {
     setFilters({
-      district: "",
+      constituency: "",
       stage: "",
       search: "",
       progressRange: [0, 100],
@@ -136,10 +136,6 @@ export default function MapPage() {
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="map">
-            <TabsList className="grid w-full grid-cols-2 mb-4">
-              <TabsTrigger value="map">Map View</TabsTrigger>
-              <TabsTrigger value="filters">Advanced Filters</TabsTrigger>
-            </TabsList>
 
             <TabsContent value="map">
               <div className={`grid gap-4 ${isFilterExpanded ? "md:grid-cols-3" : "md:grid-cols-3"} mb-4`}>
@@ -157,16 +153,16 @@ export default function MapPage() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="district">District</Label>
-                  <Select value={filters.district} onValueChange={(value) => handleFilterChange("district", value)}>
-                    <SelectTrigger id="district">
-                      <SelectValue placeholder="All Districts" />
+                  <Label htmlFor="constituency">Constituency</Label>
+                  <Select value={filters.constituency} onValueChange={(value) => handleFilterChange("constituency", value)}>
+                    <SelectTrigger id="constituency">
+                      <SelectValue placeholder="All Constituencies" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">All Districts</SelectItem>
-                      {districts.map((district) => (
-                        <SelectItem key={district} value={district}>
-                          {district}
+                      <SelectItem value="all">All Constituencies</SelectItem>
+                      {constituencies.map((constituency) => (
+                        <SelectItem key={constituency} value={constituency}>
+                          {constituency}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -348,16 +344,16 @@ export default function MapPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="district-tab">District</Label>
-                    <Select value={filters.district} onValueChange={(value) => handleFilterChange("district", value)}>
-                      <SelectTrigger id="district-tab">
-                        <SelectValue placeholder="All Districts" />
+                    <Label htmlFor="constituency-tab">Constituency</Label>
+                    <Select value={filters.constituency} onValueChange={(value) => handleFilterChange("constituency", value)}>
+                      <SelectTrigger id="constituency-tab">
+                        <SelectValue placeholder="All Constituencies" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="all">All Districts</SelectItem>
-                        {districts.map((district) => (
-                          <SelectItem key={district} value={district}>
-                            {district}
+                        <SelectItem value="all">All Constituencies</SelectItem>
+                        {constituencies.map((constituency) => (
+                          <SelectItem key={constituency} value={constituency}>
+                            {constituency}
                           </SelectItem>
                         ))}
                       </SelectContent>
