@@ -1,0 +1,645 @@
+{
+  "beneficiaries": [
+    {
+      "id": 1,
+      "beneficiaryName": "Tenzing Bhutia",
+      "constituency": "Gangtok",
+      "village": "Tadong",
+      "stage": "In Progress",
+      "progress": 60,
+      "fundUtilized": "Rs. 1,20,000",
+      "lat": 27.3314,
+      "lng": 88.6138,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-15",
+      "startDate": "2023-08-10",
+      "expectedCompletion": "2024-06-30",
+      "contactNumber": "9876543210",
+      "aadharNumber": "XXXX-XXXX-1234",
+      "familyMembers": 4,
+      "assignedOfficer": "Karma Dorjee",
+      "remarks": "Construction progressing as planned",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,50,000",
+        "utilized": "Rs. 1,20,000",
+        "remaining": "Rs. 30,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-09-15"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-11-20"
+        },
+        "roof": {
+          "status": "In Progress"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "beneficiaryName": "Karma Lepcha",
+      "constituency": "Djongu",
+      "village": "Mangan",
+      "stage": "Completed",
+      "progress": 100,
+      "fundUtilized": "Rs. 2,50,000",
+      "lat": 27.6527,
+      "lng": 88.5122,
+      "images": [
+        "/placeholder.svg?height=300&width=400",
+        "/placeholder.svg?height=300&width=400",
+        "/placeholder.svg?height=300&width=400"
+      ],
+      "lastUpdated": "2023-11-30",
+      "startDate": "2023-05-15",
+      "expectedCompletion": "2023-11-30",
+      "contactNumber": "9876543211",
+      "aadharNumber": "XXXX-XXXX-5678",
+      "familyMembers": 5,
+      "assignedOfficer": "Pema Wangdi",
+      "remarks": "Construction completed ahead of schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,50,000",
+        "utilized": "Rs. 2,50,000",
+        "remaining": "Rs. 0"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-06-20"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-08-15"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-10-10"
+        },
+        "finishing": {
+          "status": "Completed",
+          "completionDate": "2023-11-25"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "beneficiaryName": "Dawa Sherpa",
+      "constituency": "Yuksom-Tashiding",
+      "village": "Pelling",
+      "stage": "In Progress",
+      "progress": 45,
+      "fundUtilized": "Rs. 90,000",
+      "lat": 27.317,
+      "lng": 88.2336,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2024-01-05",
+      "startDate": "2023-10-01",
+      "expectedCompletion": "2024-08-15",
+      "contactNumber": "9876543212",
+      "aadharNumber": "XXXX-XXXX-9012",
+      "familyMembers": 3,
+      "assignedOfficer": "Tashi Namgyal",
+      "remarks": "Slight delay due to material shortage",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,20,000",
+        "utilized": "Rs. 90,000",
+        "remaining": "Rs. 30,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-11-10"
+        },
+        "walls": {
+          "status": "In Progress"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "beneficiaryName": "Pema Dorjee",
+      "constituency": "Namchi-Singhithang",
+      "village": "Namchi",
+      "stage": "Completed",
+      "progress": 100,
+      "fundUtilized": "Rs. 2,50,000",
+      "lat": 27.1667,
+      "lng": 88.3639,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-10-20",
+      "startDate": "2023-04-01",
+      "expectedCompletion": "2023-10-15",
+      "contactNumber": "9876543213",
+      "aadharNumber": "XXXX-XXXX-3456",
+      "familyMembers": 6,
+      "assignedOfficer": "Sonam Gyatso",
+      "remarks": "Construction completed as planned",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,50,000",
+        "utilized": "Rs. 2,50,000",
+        "remaining": "Rs. 0"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-05-10"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-07-15"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-08-30"
+        },
+        "finishing": {
+          "status": "Completed",
+          "completionDate": "2023-10-10"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "beneficiaryName": "Sonam Tamang",
+      "constituency": "Rhenock",
+      "village": "Pakyong",
+      "stage": "Delayed",
+      "progress": 20,
+      "fundUtilized": "Rs. 50,000",
+      "lat": 27.2308,
+      "lng": 88.6924,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2024-01-10",
+      "startDate": "2023-09-15",
+      "expectedCompletion": "2024-07-30",
+      "contactNumber": "9876543214",
+      "aadharNumber": "XXXX-XXXX-7890",
+      "familyMembers": 4,
+      "assignedOfficer": "Karma Dorjee",
+      "remarks": "Significant delay due to weather conditions",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 75,000",
+        "utilized": "Rs. 50,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-11-05"
+        },
+        "walls": {
+          "status": "In Progress"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "beneficiaryName": "Mingma Lama",
+      "constituency": "Kabi Lungchok",
+      "village": "Lachen",
+      "stage": "In Progress",
+      "progress": 75,
+      "fundUtilized": "Rs. 1,80,000",
+      "lat": 27.7167,
+      "lng": 88.55,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-28",
+      "startDate": "2023-07-01",
+      "expectedCompletion": "2024-03-15",
+      "contactNumber": "9876543215",
+      "aadharNumber": "XXXX-XXXX-2345",
+      "familyMembers": 5,
+      "assignedOfficer": "Pema Wangdi",
+      "remarks": "Construction ahead of schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,00,000",
+        "utilized": "Rs. 1,80,000",
+        "remaining": "Rs. 20,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-08-10"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-10-15"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-12-20"
+        },
+        "finishing": {
+          "status": "In Progress"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "beneficiaryName": "Passang Tamang",
+      "constituency": "Gyalshing-Barnyak",
+      "village": "Gyalshing",
+      "stage": "Completed",
+      "progress": 100,
+      "fundUtilized": "Rs. 2,50,000",
+      "lat": 27.2833,
+      "lng": 88.2667,
+      "images": [
+        "/placeholder.svg?height=300&width=400",
+        "/placeholder.svg?height=300&width=400",
+        "/placeholder.svg?height=300&width=400"
+      ],
+      "lastUpdated": "2023-11-15",
+      "startDate": "2023-03-10",
+      "expectedCompletion": "2023-11-10",
+      "contactNumber": "9876543216",
+      "aadharNumber": "XXXX-XXXX-6789",
+      "familyMembers": 4,
+      "assignedOfficer": "Tashi Namgyal",
+      "remarks": "Construction completed as planned",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,50,000",
+        "utilized": "Rs. 2,50,000",
+        "remaining": "Rs. 0"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-04-20"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-06-25"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-08-30"
+        },
+        "finishing": {
+          "status": "Completed",
+          "completionDate": "2023-11-05"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "beneficiaryName": "Rinchen Bhutia",
+      "constituency": "Barfung",
+      "village": "Ravangla",
+      "stage": "In Progress",
+      "progress": 30,
+      "fundUtilized": "Rs. 75,000",
+      "lat": 27.3,
+      "lng": 88.3667,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2024-01-08",
+      "startDate": "2023-11-01",
+      "expectedCompletion": "2024-09-30",
+      "contactNumber": "9876543217",
+      "aadharNumber": "XXXX-XXXX-0123",
+      "familyMembers": 3,
+      "assignedOfficer": "Sonam Gyatso",
+      "remarks": "Construction on schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,00,000",
+        "utilized": "Rs. 75,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-12-15"
+        },
+        "walls": {
+          "status": "In Progress"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "beneficiaryName": "Tashi Dorji",
+      "constituency": "Rhenock",
+      "village": "Rhenock",
+      "stage": "Delayed",
+      "progress": 15,
+      "fundUtilized": "Rs. 40,000",
+      "lat": 27.1333,
+      "lng": 88.8333,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2024-01-05",
+      "startDate": "2023-10-15",
+      "expectedCompletion": "2024-08-30",
+      "contactNumber": "9876543218",
+      "aadharNumber": "XXXX-XXXX-4567",
+      "familyMembers": 5,
+      "assignedOfficer": "Karma Dorjee",
+      "remarks": "Delay due to land dispute",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 50,000",
+        "utilized": "Rs. 40,000",
+        "remaining": "Rs. 10,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "In Progress"
+        },
+        "walls": {
+          "status": "Not Started"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "beneficiaryName": "Norbu Sherpa",
+      "constituency": "Lachen-Mangan",
+      "village": "Chungthang",
+      "stage": "In Progress",
+      "progress": 50,
+      "fundUtilized": "Rs. 1,00,000",
+      "lat": 27.6,
+      "lng": 88.65,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-20",
+      "startDate": "2023-08-15",
+      "expectedCompletion": "2024-06-15",
+      "contactNumber": "9876543219",
+      "aadharNumber": "XXXX-XXXX-8901",
+      "familyMembers": 4,
+      "assignedOfficer": "Pema Wangdi",
+      "remarks": "Construction on schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,25,000",
+        "utilized": "Rs. 1,00,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-09-30"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-12-10"
+        },
+        "roof": {
+          "status": "In Progress"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "beneficiaryName": "Chewang Dorjee",
+      "constituency": "Yuksom-Tashiding",
+      "village": "Yuksom",
+      "stage": "Completed",
+      "progress": 100,
+      "fundUtilized": "Rs. 2,50,000",
+      "lat": 27.3667,
+      "lng": 88.2167,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-10-10",
+      "startDate": "2023-02-15",
+      "expectedCompletion": "2023-10-15",
+      "contactNumber": "9876543220",
+      "aadharNumber": "XXXX-XXXX-2345",
+      "familyMembers": 6,
+      "assignedOfficer": "Tashi Namgyal",
+      "remarks": "Construction completed as planned",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,50,000",
+        "utilized": "Rs. 2,50,000",
+        "remaining": "Rs. 0"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-03-30"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-06-15"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-08-20"
+        },
+        "finishing": {
+          "status": "Completed",
+          "completionDate": "2023-10-05"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "beneficiaryName": "Lhamu Doma",
+      "constituency": "Poklok-Kamrang",
+      "village": "Jorethang",
+      "stage": "In Progress",
+      "progress": 80,
+      "fundUtilized": "Rs. 2,00,000",
+      "lat": 27.1,
+      "lng": 88.3167,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-25",
+      "startDate": "2023-06-01",
+      "expectedCompletion": "2024-02-28",
+      "contactNumber": "9876543221",
+      "aadharNumber": "XXXX-XXXX-6789",
+      "familyMembers": 4,
+      "assignedOfficer": "Sonam Gyatso",
+      "remarks": "Construction ahead of schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 2,25,000",
+        "utilized": "Rs. 2,00,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-07-15"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-09-20"
+        },
+        "roof": {
+          "status": "Completed",
+          "completionDate": "2023-11-25"
+        },
+        "finishing": {
+          "status": "In Progress"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "beneficiaryName": "Pemba Tshering",
+      "constituency": "Martam-Rumtek",
+      "village": "Rangpo",
+      "stage": "In Progress",
+      "progress": 65,
+      "fundUtilized": "Rs. 1,60,000",
+      "lat": 27.1778,
+      "lng": 88.5333,
+      "images": ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-15",
+      "startDate": "2023-07-15",
+      "expectedCompletion": "2024-04-30",
+      "contactNumber": "9876543222",
+      "aadharNumber": "XXXX-XXXX-0123",
+      "familyMembers": 5,
+      "assignedOfficer": "Karma Dorjee",
+      "remarks": "Construction on schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,75,000",
+        "utilized": "Rs. 1,60,000",
+        "remaining": "Rs. 15,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-08-30"
+        },
+        "walls": {
+          "status": "Completed",
+          "completionDate": "2023-11-15"
+        },
+        "roof": {
+          "status": "In Progress"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "beneficiaryName": "Diki Sherpa",
+      "constituency": "Lachen-Mangan",
+      "village": "Lachung",
+      "stage": "Delayed",
+      "progress": 10,
+      "fundUtilized": "Rs. 25,000",
+      "lat": 27.69,
+      "lng": 88.74,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2024-01-02",
+      "startDate": "2023-11-15",
+      "expectedCompletion": "2024-09-30",
+      "contactNumber": "9876543223",
+      "aadharNumber": "XXXX-XXXX-4567",
+      "familyMembers": 3,
+      "assignedOfficer": "Pema Wangdi",
+      "remarks": "Delay due to harsh weather conditions",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 50,000",
+        "utilized": "Rs. 25,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "In Progress"
+        },
+        "walls": {
+          "status": "Not Started"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "beneficiaryName": "Phurba Tamang",
+      "constituency": "Salghari-Zoom",
+      "village": "Dentam",
+      "stage": "In Progress",
+      "progress": 40,
+      "fundUtilized": "Rs. 1,00,000",
+      "lat": 27.2833,
+      "lng": 88.1667,
+      "images": ["/placeholder.svg?height=300&width=400"],
+      "lastUpdated": "2023-12-30",
+      "startDate": "2023-09-01",
+      "expectedCompletion": "2024-07-15",
+      "contactNumber": "9876543224",
+      "aadharNumber": "XXXX-XXXX-8901",
+      "familyMembers": 4,
+      "assignedOfficer": "Tashi Namgyal",
+      "remarks": "Construction slightly behind schedule",
+      "fundDetails": {
+        "allocated": "Rs. 2,50,000",
+        "released": "Rs. 1,25,000",
+        "utilized": "Rs. 1,00,000",
+        "remaining": "Rs. 25,000"
+      },
+      "constructionDetails": {
+        "foundation": {
+          "status": "Completed",
+          "completionDate": "2023-10-15"
+        },
+        "walls": {
+          "status": "In Progress"
+        },
+        "roof": {
+          "status": "Not Started"
+        },
+        "finishing": {
+          "status": "Not Started"
+        }
+      }
+    }
+  ]
+}
+

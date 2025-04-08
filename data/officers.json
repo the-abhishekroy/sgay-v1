@@ -1,0 +1,41 @@
+{
+  "officers": [
+    {
+      "id": 1,
+      "name": "Karma Dorjee",
+      "designation": "Junior Engineer",
+      "constituency": "Gangtok",
+      "contactNumber": "9876543001",
+      "email": "karma.dorjee@example.gov.in",
+      "assignedHouses": [1, 5, 9, 13]
+    },
+    {
+      "id": 2,
+      "name": "Pema Wangdi",
+      "designation": "Assistant Engineer",
+      "constituency": "Lachen-Mangan",
+      "contactNumber": "9876543002",
+      "email": "pema.wangdi@example.gov.in",
+      "assignedHouses": [2, 6, 10, 14]
+    },
+    {
+      "id": 3,
+      "name": "Tashi Namgyal",
+      "designation": "Junior Engineer",
+      "constituency": "Yuksom-Tashiding",
+      "contactNumber": "9876543003",
+      "email": "tashi.namgyal@example.gov.in",
+      "assignedHouses": [3, 7, 11, 15]
+    },
+    {
+      "id": 4,
+      "name": "Sonam Gyatso",
+      "designation": "Assistant Engineer",
+      "constituency": "Namchi-Singhithang",
+      "contactNumber": "9876543004",
+      "email": "sonam.gyatso@example.gov.in",
+      "assignedHouses": [4, 8, 12]
+    }
+  ]
+}
+
