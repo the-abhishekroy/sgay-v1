@@ -2,9 +2,18 @@ import type { House, Officer } from "@/lib/types"
 import beneficiariesData from "@/data/beneficiaries.json"
 import officersData from "@/data/officers.json"
 
-// In-memory storage for data manipulation
-const houses: House[] = [...beneficiariesData.beneficiaries]
-const officers: Officer[] = [...officersData.officers]
+// If your data is structured differently
+const houses: House[] = Array.isArray(beneficiariesData) 
+  ? beneficiariesData.map(item => ({...item} as House))
+  : beneficiariesData.beneficiaries 
+    ? beneficiariesData.beneficiaries.map(item => ({...item} as House))
+    : [];
+
+const officers: Officer[] = Array.isArray(officersData) 
+  ? officersData.map(item => ({...item} as Officer))
+  : officersData.officers 
+    ? officersData.officers.map(item => ({...item} as Officer))
+    : [];
 
 // In-memory storage for uploaded images
 const uploadedImages: Record<string, string> = {}
