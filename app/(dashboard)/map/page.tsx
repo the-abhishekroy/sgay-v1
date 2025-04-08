@@ -29,7 +29,7 @@ export default function MapPage() {
   const [filteredHouses, setFilteredHouses] = useState<House[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [filters, setFilters] = useState({
-    constituency: "",
+    district: "",
     stage: "",
     search: "",
     progressRange: [0, 100],
@@ -59,8 +59,8 @@ export default function MapPage() {
     // Apply filters
     let result = houses
 
-    if (filters.constituency) {
-      result = result.filter((house) => house.constituency === filters.constituency)
+    if (filters.district) {
+      result = result.filter((house) => house.district === filters.district)
     }
 
     if (filters.stage) {
@@ -93,8 +93,8 @@ export default function MapPage() {
     setFilteredHouses(result)
   }, [filters, houses])
 
-  // Get unique constituencies and stages for filters
-  const constituencies = [...new Set(houses.map((house) => house.constituency))].sort()
+  // Get unique districts and stages for filters
+  const districts = [...new Set(houses.map((house) => house.district))].sort()
   const stages = [...new Set(houses.map((house) => house.stage))].sort()
 
   const handleFilterChange = (key: string, value: any) => {
@@ -103,7 +103,7 @@ export default function MapPage() {
 
   const resetFilters = () => {
     setFilters({
-      constituency: "",
+      district: "",
       stage: "",
       search: "",
       progressRange: [0, 100],
@@ -157,16 +157,16 @@ export default function MapPage() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="constituency">Constituency</Label>
-                  <Select value={filters.constituency} onValueChange={(value) => handleFilterChange("constituency", value)}>
-                    <SelectTrigger id="constituency">
-                      <SelectValue placeholder="All Constituencies" />
+                  <Label htmlFor="district">District</Label>
+                  <Select value={filters.district} onValueChange={(value) => handleFilterChange("district", value)}>
+                    <SelectTrigger id="district">
+                      <SelectValue placeholder="All Districts" />
                     </SelectTrigger>
-                    <SelectContent position="popper" sideOffset={4} className="z-50">
-                      <SelectItem value="all">All Constituencies</SelectItem>
-                      {constituencies.map((constituency) => (
-                        <SelectItem key={constituency} value={constituency}>
-                          {constituency}
+                    <SelectContent>
+                      <SelectItem value="all">All Districts</SelectItem>
+                      {districts.map((district) => (
+                        <SelectItem key={district} value={district}>
+                          {district}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -178,7 +178,7 @@ export default function MapPage() {
                     <SelectTrigger id="stage">
                       <SelectValue placeholder="All Stages" />
                     </SelectTrigger>
-                    <SelectContent position="popper" sideOffset={4} className="z-50">
+                    <SelectContent>
                       <SelectItem value="all">All Stages</SelectItem>
                       {stages.map((stage) => (
                         <SelectItem key={stage} value={stage}>
@@ -348,16 +348,16 @@ export default function MapPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="constituency-tab">Constituency</Label>
-                    <Select value={filters.constituency} onValueChange={(value) => handleFilterChange("constituency", value)}>
-                      <SelectTrigger id="constituency-tab">
-                        <SelectValue placeholder="All Constituencies" />
+                    <Label htmlFor="district-tab">District</Label>
+                    <Select value={filters.district} onValueChange={(value) => handleFilterChange("district", value)}>
+                      <SelectTrigger id="district-tab">
+                        <SelectValue placeholder="All Districts" />
                       </SelectTrigger>
-                      <SelectContent position="popper" sideOffset={4} className="z-50">
-                        <SelectItem value="all">All Constituencies</SelectItem>
-                        {constituencies.map((constituency) => (
-                          <SelectItem key={constituency} value={constituency}>
-                            {constituency}
+                      <SelectContent>
+                        <SelectItem value="all">All Districts</SelectItem>
+                        {districts.map((district) => (
+                          <SelectItem key={district} value={district}>
+                            {district}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -370,7 +370,7 @@ export default function MapPage() {
                       <SelectTrigger id="stage-tab">
                         <SelectValue placeholder="All Stages" />
                       </SelectTrigger>
-                      <SelectContent position="popper" sideOffset={4} className="z-50">
+                      <SelectContent>
                         <SelectItem value="">All Stages</SelectItem>
                         {stages.map((stage) => (
                           <SelectItem key={stage} value={stage}>

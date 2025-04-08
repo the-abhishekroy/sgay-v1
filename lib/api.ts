@@ -1,9 +1,6 @@
 import type { House, Officer } from "@/lib/types"
 import beneficiariesData from "@/data/beneficiaries.json"
 import officersData from "@/data/officers.json"
-import fs from 'fs';
-import path from 'path';
-
 
 // In-memory storage for data manipulation
 const houses: House[] = [...beneficiariesData.beneficiaries]
@@ -20,20 +17,25 @@ const cache: Record<string, { data: any; timestamp: number }> = {}
 const CACHE_TTL = 60000 // 1 minute cache TTL
 
 // Fetch all houses with caching
-export async function fetchHouses(): Promise<House[]> {
-  try {
-    // Fetch from public folder instead of API
-    const response = await fetch('/data/beneficiaries.json');
-    
-    if (!response.ok) {
-      throw new Error(`Error loading data: ${response.status}`);
-    }
-    
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching houses:", error);
-    return []; // Return empty array to prevent crashes
+export const fetchHouses = async (): Promise<House[]> => {
+  const cacheKey = "all-houses"
+
+  // Check cache first
+  const cachedData = cache[cacheKey]
+  if (cachedData && Date.now() - cachedData.timestamp < CACHE_TTL) {
+    return cachedData.data
   }
+
+  // Simulate minimal API delay
+  await delay(50)
+
+  // Store in cache
+  cache[cacheKey] = {
+    data: [...houses],
+    timestamp: Date.now(),
+  }
+
+  return [...houses]
 }
 
 // Fetch a single house by ID with caching

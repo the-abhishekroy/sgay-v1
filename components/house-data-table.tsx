@@ -12,7 +12,7 @@ import {
   getFilteredRowModel,
   type ColumnFiltersState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal, Download } from "lucide-react"
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import {
@@ -29,14 +29,12 @@ import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import type { House } from "@/lib/types"
 import { useSidebar } from "./sidebar-provider"
-import { useToast } from "@/components/ui/use-toast"
 
 export function HouseDataTable({ houses }: { houses: House[] }) {
   const [sorting, setSorting] = useState<SortingState>([])
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
   const [rowSelection, setRowSelection] = useState({})
   const { user } = useSidebar()
-  const { toast } = useToast()
 
   const columns: ColumnDef<House>[] = [
     {
@@ -76,9 +74,9 @@ export function HouseDataTable({ houses }: { houses: House[] }) {
       cell: ({ row }) => <div>{row.getValue("beneficiaryName")}</div>,
     },
     {
-      accessorKey: "constituency",  // Changed from "district"
-      header: "Constituency",       // Changed from "District"
-      cell: ({ row }) => <div>{row.getValue("constituency")}</div>,
+      accessorKey: "district",
+      header: "District",
+      cell: ({ row }) => <div>{row.getValue("district")}</div>,
     },
     {
       accessorKey: "village",
@@ -151,19 +149,11 @@ export function HouseDataTable({ houses }: { houses: House[] }) {
                 Copy ID
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => (window.location.href = `/beneficiaries/${house.id}`)}>
-                View Details
-              </DropdownMenuItem>
+              <DropdownMenuItem>View Details</DropdownMenuItem>
               {user?.role === "admin" || user?.role === "officer" ? (
-                <DropdownMenuItem onClick={() => (window.location.href = `/manage/update-progress/${house.id}`)}>
-                  Update Progress
-                </DropdownMenuItem>
+                <DropdownMenuItem>Update Progress</DropdownMenuItem>
               ) : null}
-              {user?.role === "admin" && (
-                <DropdownMenuItem onClick={() => (window.location.href = `/manage/edit/${house.id}`)}>
-                  Edit Beneficiary
-                </DropdownMenuItem>
-              )}
+              {user?.role === "admin" && <DropdownMenuItem>Edit Beneficiary</DropdownMenuItem>}
             </DropdownMenuContent>
           </DropdownMenu>
         )
@@ -187,78 +177,6 @@ export function HouseDataTable({ houses }: { houses: House[] }) {
       rowSelection,
     },
   })
-
-  // Export functionality
-  const exportToCSV = () => {
-    try {
-      // Get selected rows or all filtered rows if none selected
-      const rowsToExport =
-        Object.keys(rowSelection).length > 0
-          ? table.getFilteredSelectedRowModel().rows
-          : table.getFilteredRowModel().rows
-
-      // Create CSV header
-      const headers = columns
-        .filter((column) => column.id !== "select" && column.id !== "actions")
-        .map((column) => {
-          if (typeof column.header === "string") return column.header
-          if (column.id) return column.id
-          return column.id
-        })
-
-      // Create CSV content
-      const csvContent = [
-        headers.join(","),
-        ...rowsToExport.map((row) => {
-          return columns
-            .filter((column) => column.id !== "select" && column.id !== "actions")
-            .map((column) => {
-              const id = column.id
-              let value = id ? row.getValue(id) : ""
-
-              // Handle special cases
-              if (id === "stage") {
-                return `"${value}"`
-              } else if (id === "progress") {
-                return `${value}%`
-              } else if (id === "constituency") {  
-                return `"${value}"`  
-              } else {
-                // Escape quotes and wrap in quotes if contains comma
-                if (typeof value === "string" && (value.includes(",") || value.includes('"'))) {
-                  value = `"${value.replace(/"/g, '""')}"`
-                }
-                return value
-              }
-            })
-            .join(",")
-        }),
-      ].join("\n")
-
-      // Create and download the file
-      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" })
-      const url = URL.createObjectURL(blob)
-      const link = document.createElement("a")
-      link.setAttribute("href", url)
-      link.setAttribute("download", `beneficiaries-export-${new Date().toISOString().split("T")[0]}.csv`)
-      link.style.visibility = "hidden"
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-
-      toast({
-        title: "Export Successful",
-        description: `${rowsToExport.length} beneficiaries exported to CSV.`,
-      })
-    } catch (error) {
-      console.error("Export error:", error)
-      toast({
-        variant: "destructive",
-        title: "Export Failed",
-        description: "There was an error exporting the data. Please try again.",
-      })
-    }
-  }
 
   return (
     <div className="space-y-4">
@@ -298,10 +216,7 @@ export function HouseDataTable({ houses }: { houses: House[] }) {
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" onClick={exportToCSV}>
-            <Download className="mr-2 h-4 w-4" />
-            Export
-          </Button>
+          <Button variant="outline">Export</Button>
         </div>
       </div>
       <div className="rounded-md border">
