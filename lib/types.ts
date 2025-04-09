@@ -5,7 +5,6 @@ export interface House {
   village: string
   stage: string
   progress: number
-  fundUtilized: string
   lat: number
   lng: number
   images: string[]

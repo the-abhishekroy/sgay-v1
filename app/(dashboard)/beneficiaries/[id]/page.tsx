@@ -413,7 +413,7 @@ export default function BeneficiaryDetailsPage({ params }: { params: { id: strin
                 </div>
                 <div>
                   <p className="text-sm font-medium">Fund Utilized</p>
-                  <p className="text-sm text-muted-foreground">{house.fundUtilized}</p>
+                  <p className="text-sm text-muted-foreground">{house.fundDetails.utilized}</p>
                 </div>
               </div>
             </CardContent>

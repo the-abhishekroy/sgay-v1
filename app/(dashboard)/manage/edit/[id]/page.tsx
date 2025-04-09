@@ -242,7 +242,6 @@ export default function EditBeneficiaryPage() {
         village: data.village,
         stage: data.stage,
         progress: data.progress,
-        fundUtilized: data.fundUtilized,
         lat: data.lat,
         lng: data.lng,
         images: images,
